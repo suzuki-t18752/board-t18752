@@ -2,7 +2,7 @@
   session_start();
   header("Content-type: text/html; charset=utf-8");
   if(!isset($_SESSION["user_id"])) {
-    $no_login_url = "index.php";
+    $no_login_url = "../index.php";
     header("Location: {$no_login_url}");
     exit;
   }
