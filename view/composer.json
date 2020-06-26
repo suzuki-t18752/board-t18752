@@ -1,5 +1,6 @@
 {
     "require": {
-    "felixfbecker/language-server": "*"
+      "php": "~7.0",
+      "ext-mbstring": "*"
     }
-}
+ }
