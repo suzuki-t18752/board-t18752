@@ -1,0 +1,68 @@
+body{
+  margin: 0;
+  background-color: aliceblue;
+}
+header{
+  margin: 0;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header > a{
+  text-decoration: none;
+  color: black;
+}
+.top_icon{
+  font-size: 24px;
+  font-weight: bold;
+}
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 20%;
+}
+#mail,#account,#password{
+  width: 100%;
+}
+.user_form > p{
+  margin: 30px auto 0 auto;
+  width: 25%;
+}
+.user_form > h2{
+  margin: 30px auto 0 auto;
+  width: 25%;
+}
+
+main > p{
+  margin: 30px auto 0 10px;
+}
+
+@media screen and (max-width:599px){
+  .user_form > p{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+  .user_form > h2{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+}

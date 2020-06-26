@@ -1,0 +1,84 @@
+body{
+  margin: 0;
+  background-color: aliceblue;
+}
+header{
+  margin: 0;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header > a{
+  text-decoration: none;
+  color: black;
+}
+.top_icon{
+  font-size: 24px;
+  font-weight: bold;
+}
+.in_icon{
+  margin: 0;
+  padding-left: 60px;
+  height: 70px;
+  background-color: white;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: flex-start;
+}
+.log_in_form > form{
+  margin: 30px auto 0 auto;
+  width: 25%;
+}
+.log_in_form > p{
+  margin: 30px auto 0 auto;
+  width: 25%;
+}
+.count_view{
+  background-color: white;
+  padding-left: 10px;
+}
+
+.article_list{
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.article_list > div{
+  border-bottom: solid;
+  width: calc( ( 100% - 60px ) / 3 );
+  overflow-wrap: break-word;
+}
+.article_list > div > p{
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.search_form{
+  padding-left: 10px;
+}
+
+@media screen and (max-width:959px){
+  .article_list > div{
+    border-bottom: solid;
+    width: calc( ( 100% - 60px ) / 2 );
+    overflow-wrap: break-word;
+  }
+}
+@media screen and (max-width:599px){
+  .article_list > div{
+    border-bottom: solid;
+    width: 100%;
+    overflow-wrap: break-word;
+  }
+  .log_in_form > form{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+  .log_in_form > p{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+}

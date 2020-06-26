@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+  background-color: aliceblue;
+}
+header{
+  margin: 0;
+  padding-left: 60px;
+  height: 70px;
+  background-color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 20%;
+}
+#mail{
+  width: 100%;
+}
+.mail_form > p{
+  margin: 30px auto 0 auto;
+  width: 30%;
+}
+.mail_form > h2{
+  margin: 30px auto 0 auto;
+  width: 30%;
+}
+
+.mail_view > p{
+  margin: 30px auto 0 auto;
+  width: 50%;
+  overflow-wrap: break-word;
+}
+.mail_view > h2{
+  margin: 30px auto 0 auto;
+  width: 50%;
+}
+
+.insert_form > p{
+  margin: 30px auto 0 auto;
+  width: 30%;
+}
+.insert_form > h2{
+  margin: 30px auto 0 auto;
+  width: 30%;
+}
+#account,#password,#mail{
+  width: 100%;
+}
+
+.insert_view > p{
+  margin: 30px auto 0 auto;
+  width: 50%;
+}
+.insert_view > h2{
+  margin: 30px auto 0 auto;
+  width: 50%;
+}
+
+@media screen and (max-width:599px){
+  .mail_form > p{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+  .mail_form > h2{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+  .mail_view > p{
+    margin: 30px auto 0 auto;
+    width: 90%;
+    overflow-wrap: break-word;
+  }
+  .mail_view > h2{
+    margin: 30px auto 0 auto;
+    width: 90%;
+  }
+  .insert_form > p{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+  .insert_form > h2{
+    margin: 30px auto 0 auto;
+    width: 70%;
+  }
+  .insert_view > p{
+    margin: 30px auto 0 auto;
+    width: 90%;
+  }
+  .insert_view > h2{
+    margin: 30px auto 0 auto;
+    width: 90%;
+  }
+}
