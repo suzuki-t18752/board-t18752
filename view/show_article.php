@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="css/articles.css">
   </head>
   <body>
+    <header>
+      <a href="../index.php" class="top_icon">BOARD</a>
+      <a href="new_article.php">記事の投稿</a>
+      <a href="user.php">ユーザー登録の編集</a>
+      <a href="../index.php?btn_logout=ログアウト">ログアウト</a>
+    </header>
     <?php
       require_once("../controller/article_controller.php");
       require_once("../model/article_model.php");
@@ -25,7 +31,6 @@
       }elseif(!empty($_GET['reply_delete'])) {
         reply_delete();
       }
-      require_once("header.php");
     ?> 
     <main>
       <div class="article_content">

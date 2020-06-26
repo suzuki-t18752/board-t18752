@@ -6,15 +6,18 @@
     <link rel="stylesheet" href="css/articles.css">
   </head>
   <body>
-    <?php
-      require_once("header.php");
-    ?>
+    <header>
+      <a href="../index.php" class="top_icon">BOARD</a>
+      <a href="new_article.php">記事の投稿</a>
+      <a href="user.php">ユーザー登録の編集</a>
+      <a href="../index.php?btn_logout=ログアウト">ログアウト</a>
+    </header>
     <main>
       <?php
         require_once("../controller/article_controller.php");
         require_once("../model/article_model.php"); 
       ?>
-      <form action="index.php" method="post" enctype="multipart/form-data">
+      <form action="../index.php" method="post" enctype="multipart/form-data">
         <div class="modal js-modal">
           <div class="modal__bg js-modal-close"></div>
           <div class="modal__content">

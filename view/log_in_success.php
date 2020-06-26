@@ -1,7 +1,10 @@
-<?php
-  require_once("header.php");
-?>
 <main>
+  <header>
+    <a href="index.php" class="top_icon">BOARD</a>
+    <a href="view/new_article.php">記事の投稿</a>
+    <a href="view/user.php">ユーザー登録の編集</a>
+    <a href="index.php?btn_logout=ログアウト">ログアウト</a>
+  </header>
   <div class="count_view">
     <?php data_count();?>
     <span>今月の登録者数:<strong><?php echo $data[0]["count(*)"]; ?></strong>人/</span>

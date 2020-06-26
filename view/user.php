@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="css/users.css">
   </head>
   <body>
+    <header>
+      <a href="../index.php" class="top_icon">BOARD</a>
+      <a href="new_article.php">記事の投稿</a>
+      <a href="user.php">ユーザー登録の編集</a>
+      <a href="../index.php?btn_logout=ログアウト">ログアウト</a>
+    </header>
     <?php
       require_once("../controller/user_controller.php");
       require_once("../model/user_model.php");
@@ -17,7 +23,6 @@
       }elseif(!empty($_GET['myarticle_ex'])) {
         myarticle_ex();
       }
-      require_once("header.php");
     ?>
     <main>
       <form action="user.php" method="post">
