@@ -7,8 +7,8 @@
   </head>
   <body>
     <?php
-      require_once("controller/index_controller.php");
-      require_once("model/index_model.php");
+      // require_once("controller/index_controller.php");
+      // require_once("model/index_model.php");
       if(!empty($_POST['new_article'])){
         new_article();
       }
