@@ -1,7 +1,7 @@
 <?php
   session_start();
   header("Content-type: text/html; charset=utf-8");
-  require_once("../commons/dbconnect.php");
+  require_once("commons/dbconnect.php");
   dbconnection();
   // ログアウトボタン押下時に
   function log_out(){
