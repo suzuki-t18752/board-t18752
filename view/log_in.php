@@ -10,5 +10,5 @@
     <p>パスワード：<br><input type="password" name="password"></p>
     <input type="submit" name="login" value="ログイン">
   </form>
-  <p><a href="entry/registration_mail_form.php">はじめての方はこちらから登録を</a></p>
+  <p><a href="view/entry/registration_mail_form.php">はじめての方はこちらから登録を</a></p>
 </main>
