@@ -8,7 +8,7 @@
   function mail_insert(){
     global $dbh,$message,$errors,$mail,$url;
     $urltoken = hash('sha256',uniqid(rand(),1));
-    $url = "http://localhost/board/view/entry/registration_form.php"."?urltoken=".$urltoken;
+    $url = "http://board-t18752.herokuapp.com/view/entry/registration_form.php"."?urltoken=".$urltoken;
     
     //ここでデータベースに登録する
     // 現在最新のidを取得しpre_user_idにする
