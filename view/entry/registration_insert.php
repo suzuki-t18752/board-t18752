@@ -23,7 +23,7 @@
 			<h2>会員登録完了画面</h2>
 			<p>登録完了いたしました。<br>下記ログインIDはログイン時に必要なのでパスワードと一緒に大切に保管してください。</p>
 			<p><strong>ログインID：<?php echo $user_id?></strong></p>
-			<p><a href="../index.php">ログイン画面</a></p>
+			<p><a href="../../index.php">ログイン画面</a></p>
 			<?php elseif(count($errors) > 0): ?>
 			<?php
 				foreach($errors as $value){
