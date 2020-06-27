@@ -36,6 +36,7 @@
     //データベース接続切断
     $dbh = null;
     //メールの宛先
+    require __DIR__ . '../../vendor/autoload.php';
     $sendgrid = new SendGrid(getenv('SENDGRID_USERNAME'), getenv('SENDGRID_PASSWORD'));
     $email = new SendGrid\Email();
     $email->addTo($mail)->
