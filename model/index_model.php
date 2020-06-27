@@ -108,7 +108,7 @@
       while ($row2 = $stmt->fetch()) {
         echo "<p>" . "投稿者：" . $row2['account'] . "</p>";
       }
-      echo "<a href='show_article.php?id=" . $row['article_id'] . "'>" . "記事詳細" . "</a>" . "</div>";
+      echo "<a href='view/show_article.php?id=" . $row['article_id'] . "'>" . "記事詳細" . "</a>" . "</div>";
     }
     echo "</div>";
     echo '<p>全件数'. $cnt. '件'. '　'; // 全データ数の表示です。
