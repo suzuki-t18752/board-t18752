@@ -58,7 +58,7 @@
             <h2>記事の編集</h2>
             <p>タイトル：<br><input id="title" type="text" name="title" value='<?php echo $row["title"];?>'></p>
             <p>本文：<br><textarea id="article" name="article"><?php echo $row["article"];?></textarea></p>
-            <p><input id="image" type="file" name="image" size="30"></p>
+            <p><input id="image" type="file" name="image" size="30"><?php echo $row["image"];?></p>
             <p>
               <input type="button" value="確認する" onclick="return check_article()"><br>
               <font id="all_msg" color="red"></font>
