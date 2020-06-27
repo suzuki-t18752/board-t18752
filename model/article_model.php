@@ -165,6 +165,15 @@
     $title = isset($_POST['title']) ? $_POST['title'] : NULL;
     $article = isset($_POST['article']) ? $_POST['article'] : NULL;
     $image = $_FILES['image']['name'];
+    if($image == ""){
+      $stmh = $dbh->prepare("SELECT * FROM article WHERE article_id = :article_id;");
+      $stmh->bindValue(':article_id', $article_id, PDO::PARAM_STR);
+      $stmh->execute();
+      $row = $stmh->fetch();
+      $image = $row["image"];
+    }else{
+      move_uploaded_file($_FILES['image']['tmp_name'],'C:/xampp/htdocs/board/img/' . $image);
+    }
     //テーブルに本登録する
     $statement = $dbh->prepare("UPDATE article SET title = :title, article = :article, image = :image WHERE article_id = :article_id");
     //プレースホルダへ実際の値を設定する
@@ -173,7 +182,6 @@
     $statement->bindValue(':article', $article, PDO::PARAM_STR);
     $statement->bindValue(':image', $image);
     $statement->execute();
-    move_uploaded_file($_FILES['image']['tmp_name'],'C:/xampp/htdocs/board/img/' . $image);
     echo "投稿の更新が完了しました。";
   }
   function comment_update(){
