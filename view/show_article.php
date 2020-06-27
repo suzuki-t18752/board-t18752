@@ -38,7 +38,7 @@
         <?php
           show_article();
           if($_SESSION["user_id"] == $row["user_id"]){
-            echo "<a href='index.php?article_delete=" . $article_id ."' class='menu_botton' onclick='return delete_check()'>削除/</a>";
+            echo "<a href='../index.php?article_delete=" . $article_id ."' class='menu_botton' onclick='return delete_check()'>削除/</a>";
             echo "<a class='acdn-button menu_botton'>編集</a>";
           }
         ?>
