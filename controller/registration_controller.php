@@ -10,6 +10,6 @@
   header('X-FRAME-OPTIONS: SAMEORIGIN');
 
   //データベース接続
-  require_once("../commons/dbconnect.php");
+  require_once("../../commons/dbconnect.php");
   dbconnection();
 ?>
