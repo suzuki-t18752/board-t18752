@@ -36,21 +36,28 @@
     //データベース接続切断
     $dbh = null;
     //メールの宛先
-    $mailTo = $mail;
-    //Return-Pathに指定するメールアドレス
-    $returnMail = 'web@sample.com';
-    $name = "board";
-    $mail = 'web@sample.com';
-    $subject = "【board】会員登録用URLのお知らせ";
-    $body = <<< EOM
-    24時間以内に下記のURLからご登録下さい。
-    {$url}
-    EOM;
-    mb_language('ja');
-    mb_internal_encoding('UTF-8');
+    $sendgrid = new SendGrid(getenv('SENDGRID_USERNAME'), getenv('SENDGRID_PASSWORD'));
+    $email = new SendGrid\Email();
+    $email->addTo($mail)->
+        setFrom('from@example.com')->
+        setSubject("【board】会員登録用URLのお知らせ")->
+        setText("24時間以内に下記のURLからご登録下さい。" . $url);
+
+    // $mailTo = $mail;
+    // $returnMail = 'web@sample.com';
+    // $name = "board";
+    // $mail = 'web@sample.com';
+    // $subject = "【board】会員登録用URLのお知らせ";
+    // $body = <<< EOM
+    // 24時間以内に下記のURLからご登録下さい。
+    // {$url}
+    // EOM;
+    // mb_language('ja');
+    // mb_internal_encoding('UTF-8');
     //Fromヘッダーを作成
-    $header = 'From: ' . mb_encode_mimeheader($name). ' <' . $mail. '>';
-    if (mb_send_mail($mailTo, $subject, $body, $header, '-f'. $returnMail)) {
+    // $header = 'From: ' . mb_encode_mimeheader($name). ' <' . $mail. '>';
+    // if (mb_send_mail($mailTo, $subject, $body, $header, '-f'. $returnMail)) {
+    if ($sendgrid->send($email)) {
       //セッション変数を全て解除
       $_SESSION = array();
       //クッキーの削除
