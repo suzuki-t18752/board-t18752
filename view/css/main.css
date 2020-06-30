@@ -57,10 +57,14 @@ header > a{
 }
 
 .article_list{
-  margin: 0 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .article_list > div{
   border-bottom: solid;
+  width: calc( ( 100% - 60px ) / 3 );
   overflow-wrap: break-word;
 }
 .article_list > div > p{
@@ -73,6 +77,9 @@ header > a{
 }
 
 @media screen and (max-width:959px){
+  .article_list > div{
+    width: calc( ( 100% - 60px ) / 2 );
+  }
   header > a {
     display: none;
   }
