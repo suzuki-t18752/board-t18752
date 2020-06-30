@@ -12,8 +12,8 @@
 </header>
 <div id="gloval-nav">
   <ul>
-    <li><a href="new_article.php">記事の投稿</a></li>
-    <li><a href="user.php">ユーザー登録の編集</a></li>
+    <li><a href="view/new_article.php">記事の投稿</a></li>
+    <li><a href="view/user.php">ユーザー登録の編集</a></li>
     <li><a href="index.php?btn_logout=ログアウト">ログアウト</a></li>
   </ul>
 </div>
