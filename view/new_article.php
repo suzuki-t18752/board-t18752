@@ -11,7 +11,19 @@
       <a href="new_article.php">記事の投稿</a>
       <a href="user.php">ユーザー登録の編集</a>
       <a href="../index.php?btn_logout=ログアウト">ログアウト</a>
+      <div id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
+    <div id="gloval-nav">
+      <ul>
+        <li><a href="new_article.php">記事の投稿</a></li>
+        <li><a href="user.php">ユーザー登録の編集</a></li>
+        <li><a href="index.php?btn_logout=ログアウト">ログアウト</a></li>
+      </ul>
+    </div>
     <main>
       <?php
         require_once("../controller/article_controller.php");
@@ -44,5 +56,6 @@
     </main>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/validation.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
   </body>
 </html>

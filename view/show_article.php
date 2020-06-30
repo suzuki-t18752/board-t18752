@@ -11,7 +11,19 @@
       <a href="new_article.php">記事の投稿</a>
       <a href="user.php">ユーザー登録の編集</a>
       <a href="../index.php?btn_logout=ログアウト">ログアウト</a>
+      <div id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
+    <div id="gloval-nav">
+      <ul>
+        <li><a href="new_article.php">記事の投稿</a></li>
+        <li><a href="user.php">ユーザー登録の編集</a></li>
+        <li><a href="index.php?btn_logout=ログアウト">ログアウト</a></li>
+      </ul>
+    </div>
     <?php
       require_once("../controller/article_controller.php");
       require_once("../model/article_model.php");
