@@ -48,16 +48,16 @@
       $comment_id = $row['comment_id'];
       echo "<br>";
       if($row['user_id'] == $_SESSION["user_id"]){
-        echo '<a class="acdn-button menu_botton">編集/</a>';
+        echo '<a class="acdn-button menu_botton link_btn">編集</a>/';
         echo '<div class="acdn-target">';
         echo 
           "<div class='comment_menu'>
             <form action='show_article.php?id=" . $article_id . "'method='post'>
               <input id='comment' type='text' name='come_up'>
               <input type='hidden' name='comment_id_post' value='" . $comment_id ."'>
-              <input type='submit' name='comment_update' value='更新' onclick=''>
+              <input type='submit' class='form_btn' name='comment_update' value='更新' onclick=''>
             </form>
-            <a href='show_article.php?id=" . $article_id . "&comment_delete=" . $comment_id ."' class='menu_botton' onclick='return delete_check()'>削除</a>
+            <a href='show_article.php?id=" . $article_id . "&comment_delete=" . $comment_id ."' class='menu_botton delete_btn' onclick='return delete_check()'>削除</a>
           </div>"
         ;
         echo "</div>";
@@ -89,13 +89,13 @@
     $stmu->bindValue(':comment_id', $comment_id, PDO::PARAM_STR);
     $stmu->execute();
     echo
-      "<a class='acdn-button menu_botton'>返信</a>
+      "<a class='acdn-button menu_botton link_btn'>返信</a>
         <div class='acdn-target reply_list'>
           <div>
             <form action='show_article.php?id=" . $article_id . "'method='post'>
               <input id='reply' type='text' name='reply'>
               <input type='hidden' name='comment_id_post' value='" . $comment_id ."'>
-              <input type='submit' name='reply_post' value='返信' onclick=''>
+              <input type='submit' class='form_btn' name='reply_post' value='返信' onclick=''>
             </form>
           </div>"
     ;
@@ -114,15 +114,15 @@
       echo "<br>";
       if($row3["user_id"] == $_SESSION["user_id"]){
       echo 
-        "<a class='acdn-button menu_botton'>編集</a>
+        "<a class='acdn-button menu_botton link_btn'>編集</a>
           <div class='acdn-target'>
             <div>
               <form action='show_article.php?id=" . $article_id . "'method='post'>
                 <input id='comment' type='text' name='rep_up'>
                 <input type='hidden' name='reply_id_post' value='" . $rep_flg ."'>
-                <input type='submit' name='reply_update' value='更新' onclick=''>
+                <input type='submit' class='form_btn' name='reply_update' value='更新' onclick=''>
               </form>
-              <a href='show_article.php?id=" . $article_id . "&reply_delete=" . $rep_flg ."'class='menu_botton' onclick='return delete_check()'>削除</a>
+              <a href='show_article.php?id=" . $article_id . "&reply_delete=" . $rep_flg ."'class='menu_botton delete_btn' onclick='return delete_check()'>削除</a>
             </div>
           </div>";
       }

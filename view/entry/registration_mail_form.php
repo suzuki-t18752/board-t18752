@@ -26,7 +26,7 @@
         <p>メールアドレス：<br><input id="mail" type="text" name="mail" onBlur="checkmail()"></p>
         <p>
           <input type="hidden" name="token" value="<?=$token?>">
-          <input type="button" value="登録する" onclick="return checkbutton()">
+          <input type="button" class='form_btn' value="登録する" onclick="return checkbutton()">
           <font id="all_msg" color="red">
         </p>
       </div>

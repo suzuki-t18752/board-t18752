@@ -26,7 +26,7 @@
     <form action="index.php" method="post" class="search_form">
       <input type="text" name="title" placeholder="タイトル">
       <input type="date" name="date">
-      <input type="submit" value="検索する" name="search_article">
+      <input type="submit" class="form_btn" value="検索" name="search_article">
     </form>
   </div>
   <div>

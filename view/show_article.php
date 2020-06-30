@@ -50,8 +50,8 @@
         <?php
           show_article();
           if($_SESSION["user_id"] == $row["user_id"]){
-            echo "<a href='../index.php?article_delete=" . $article_id ."' class='menu_botton' onclick='return delete_check()'>削除/</a>";
-            echo "<a class='acdn-button menu_botton'>編集</a>";
+            echo "<a href='../index.php?article_delete=" . $article_id ."' class='menu_botton delete_btn' onclick='return delete_check()'>削除</a>/";
+            echo "<a class='acdn-button menu_botton link_btn'>編集</a>";
           }
         ?>
         <div class="acdn-target article_up_form">
@@ -72,7 +72,7 @@
             <p>本文：<br><textarea id="article" name="article"><?php echo $row["article"];?></textarea></p>
             <p><input id="image" type="file" name="image" size="30"></p>
             <p>
-              <input type="button" value="確認する" onclick="return check_article()"><br>
+              <input type="button" class='form_btn' value="確認する" onclick="return check_article()"><br>
               <font id="all_msg" color="red"></font>
             </p>
           </form>
@@ -88,7 +88,7 @@
           <div class="comment_form">
             <span>コメント</span>
             <input id='comment' type='text' name='comment'>
-            <input type="submit" name="comment_post" value="コメント" onclick="return comment_check()">
+            <input type="submit" class='form_btn' name="comment_post" value="コメント" onclick="return comment_check()">
           </div>
         </form>
         <div>

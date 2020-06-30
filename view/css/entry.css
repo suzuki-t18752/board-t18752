@@ -76,7 +76,16 @@ header{
   margin: 30px auto 0 auto;
   width: 50%;
 }
-
+.form_btn{
+  border-radius:2px;
+  background: dodgerblue;
+  color:#fff;
+  border:none;
+}
+.form_btn:hover{
+  background:#eee;
+  color: dodgerblue;
+}
 @media screen and (max-width:599px){
   .mail_form > p{
     margin: 30px auto 0 auto;

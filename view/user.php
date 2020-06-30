@@ -55,7 +55,7 @@
           <p>アカウント名：<br><?php echo "<input id='account' type='text' name='account' onBlur='check_account()'". 'value="' . $account_data . '">'; ?></p>
           <p>パスワード：<br><input id="password" type="text" name="password" onblur="check_password()"></p>
           <p>
-            <input type="button" value="確認する" onclick="return check_user()">
+            <input type="button" class='form_btn' value="確認する" onclick="return check_user()">
             <font id="all_msg" color="red"></font>
           </p>
         </div>

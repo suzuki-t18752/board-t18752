@@ -123,6 +123,23 @@ textarea{
 .comment_menu{
   margin-bottom: 10px;
 }
+.form_btn{
+  border-radius:2px;
+  background: dodgerblue;
+  color:#fff;
+  border:none;
+}
+.form_btn:hover{
+  background:#eee;
+  color: dodgerblue;
+}
+.delete_btn{
+  color:red;
+}
+.delete_btn:hover{
+  background:red;
+  color: white;
+}
 @media screen and (max-width:959px){
   header > a {
     display: none;

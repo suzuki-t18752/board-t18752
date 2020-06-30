@@ -63,6 +63,7 @@ header > a{
   flex-wrap: wrap;
 }
 .article_list > div{
+  padding: 0 5px;
   border-bottom: solid;
   width: calc( ( 100% - 60px ) / 3 );
   overflow-wrap: break-word;
@@ -74,6 +75,16 @@ header > a{
 
 .search_form{
   padding-left: 10px;
+}
+.form_btn{
+  border-radius:2px;
+  background: dodgerblue;
+  color:#fff;
+  border:none;
+}
+.form_btn:hover{
+  background:#eee;
+  color: dodgerblue;
 }
 
 @media screen and (max-width:959px){

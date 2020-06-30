@@ -36,7 +36,7 @@
         <p>パスワード：<br><input id="password" type="text" name="password" onblur="check_password()"></p>
         <p>
           <input type="hidden" name="token" value="<?=$token?>">
-          <input type="button" value="確認する" onclick="return account_check()">
+          <input type="button" class='form_btn' value="確認する" onclick="return account_check()">
           <br>
           <font id="all_msg" color="red">
         </p>

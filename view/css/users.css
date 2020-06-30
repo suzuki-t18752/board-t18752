@@ -71,6 +71,16 @@ header > a{
 main > p{
   margin: 30px auto 0 10px;
 }
+.form_btn{
+  border-radius:2px;
+  background: dodgerblue;
+  color:#fff;
+  border:none;
+}
+.form_btn:hover{
+  background:#eee;
+  color: dodgerblue;
+}
 @media screen and (max-width:959px){
   header > a {
     display: none;

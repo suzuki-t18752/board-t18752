@@ -47,7 +47,7 @@
           <p>本文：<br><textarea id="article" name="article"></textarea></p>
           <p><input id="image" type="file" name="image" size="30"></p>
           <p>
-            <input type="button" value="確認する" onclick="return check_article()">
+            <input type="button" class='form_btn' value="確認する" onclick="return check_article()">
             <br>
             <font id="all_msg" color="red"></font>
           </p>
