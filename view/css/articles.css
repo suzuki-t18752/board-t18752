@@ -140,6 +140,10 @@ textarea{
   background:red;
   color: white;
 }
+.link_btn:hover{
+  background:lightgray;
+  color: white;
+}
 @media screen and (max-width:959px){
   header > a {
     display: none;
